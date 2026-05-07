@@ -4,7 +4,7 @@
 #
 # Architecture :
 # Arduino → USB → PC local (serial_reader.py) → POST /data → Railway → App Flutter
-
+import joblib
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pickle
@@ -21,8 +21,7 @@ CORS(app)
 
 # ─── Chargement du modèle ML ───────────────────────────────────────────────────
 print("Chargement du modèle ML...")
-with open('lora_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+model = joblib.load('lora_model.pkl')
 with open('model_info.json', 'r') as f:
     model_info = json.load(f)
 
