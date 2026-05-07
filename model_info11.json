@@ -1,0 +1,33 @@
+{
+  "best_model": "Random Forest",
+  "features": [
+    "rssi",
+    "snr",
+    "temperature",
+    "humidity",
+    "obstacle"
+  ],
+  "mae": 0.917,
+  "rmse": 5.8778,
+  "r2": 0.9982,
+  "log_transform": true,
+  "n_samples": 1210,
+  "distances": [
+    10,
+    15,
+    20,
+    30,
+    35,
+    40,
+    50,
+    60,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "note": "DatasetV1 \u2014 distances 10m-400m. Seuil recommand\u00e9 >= 30m."
+}
